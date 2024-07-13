@@ -1,0 +1,33 @@
+{% extends "sociedad/index.html" %}
+
+
+{% block titulo %}
+<h1 class="fw-bolder">Los Pilotos</h1>
+{% endblock titulo %}
+
+
+{% block contenido %}
+<h2> Conosca todos los corredores  </h2>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>apellido</th>
+            <th>vehiculo</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in Pilotos %}
+        <tr>
+            <td>{{ p.id }}</td>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.apellido }}</td>
+            <td>{{ vehiculo }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
